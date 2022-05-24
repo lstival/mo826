@@ -21,6 +21,7 @@ oferecida no primeiro semestre de 2022, na Unicamp.
 
 Código disponível em
 <https://github.com/lstival/mo826/blob/main/P2.ipynb>
+
 # Contextualização da Proposta
 
 O objetivo desse trabalho foi desenvolver um algoritmo capaz de
@@ -129,8 +130,8 @@ Tabela [\[tab:motivos_morte\]][2].
 | Bullet wound                                |     7      |
 | COVID-19                                    |     6      |
 | Chronic obstructive bronchitis (disorder)   |     5      |
-
-Considerando as causas de morte somente do conjunto 02 são apresentadas
+    
+**Table 1** - Considerando as causas de morte somente do conjunto 02 são apresentadas
 motivos diferentes do conjunto 02, onde o foco não são mais doenças
 cardíacas, mas sim doenças mais abragente.
 
@@ -154,7 +155,7 @@ cardíacas, mas sim doenças mais abragente.
 | Pneumonia                                   |     3      |
 | Stroke                                      |     3      |
 
-Lista contendo os dez motivos de encontro com maior letalidade
+**Table 2** - Lista contendo os dez motivos de encontro com maior letalidade
 considerando o conjunto 01, onde é possível constatar que doenças
 cardíacas representam maioria dos casos.
 
@@ -286,7 +287,7 @@ superior a 70%.
 | Regressão                       |     71%      |           66%           |
 | XGBoost                         |     79%      |           75%           |
 
-Resultados obtidos após o treinamento dos classificadores para o
+**Table 3** - Resultados obtidos após o treinamento dos classificadores para o
 conjunto 01, onde é possível observar que a acurácia balanceada
 apresenta valores menores do que acurácia clássica, esse fenômeno ocorre
 provavelmente devido à quantidade de elementos por cada classe não ser
@@ -309,7 +310,7 @@ quando comparado com a Regressão Logística.
 | Regressão                       |     72%      |           66%           |
 | XGBoost                         |     78%      |           73%           |
 
-Resultados obtidos após o treinamento dos classificadores 02, assim como
+**Table 4** - Resultados obtidos após o treinamento dos classificadores 02, assim como
 para o conjunto 01 os valores de acurácia balanceada são inferiores.
 
 </div>
@@ -329,7 +330,7 @@ generalização dos valores de predição dos classificadores
 | Regressão                                                    |     67%      |           66%           |
 | XGBoost                                                      |     80%      |           70%           |
 
-Resultados obtidos após o treinamento dos classificadores no conjunto 01
+**Table 5** - Resultados obtidos após o treinamento dos classificadores no conjunto 01
 e testado no conjunto 02, é possível observar que a regressão apresentou
 resultados inferiores do que o testado no próprio conjunto, porém, a
 XGBoost obteve uma melhoria em seus resultados.
@@ -347,7 +348,7 @@ XGBoost obteve uma melhoria em seus resultados.
 | Regressão                                                    |     81%      |           79%           |
 | XGBoost                                                      |     81%      |           75%           |
 
-Resultados obtidos após o treinamento dos classificadores no conjunto 02
+**Table 6** - Resultados obtidos após o treinamento dos classificadores no conjunto 02
 e testado no conjunto 01, diferente do resultado da
 Tabela [\[tab:resultados_01_no_02\]][1] a regressão manteve uma
 consistência melhor que XGBoost, mas ambos possuem valores aceitaveis
