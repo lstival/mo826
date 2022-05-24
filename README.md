@@ -1,6 +1,9 @@
 # mo826
 Trabalhos da disciplina mo826 (Ciência e Visualização de Dados em Saúde)
 
+# Trabalho 2
+# Prognóstico de Mortalidade em Dados Sintéticos.
+
 # Apresentação
 
 O presente projeto foi originado no contexto das atividades da
