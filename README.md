@@ -9,7 +9,7 @@ oferecida no primeiro semestre de 2022, na Unicamp.
 
 <div id="tab:integrantes">
 
-| **Integrantes do Projeto**                            |
+| **Integrantes do Projeto** |        |                    |
 |:---------------------------|:------:|:------------------:|
 | **Nome**                   | **RA** | **Especialização** |
 | Fabrício Ferreira da Silva | 231900 |     Computação     |
