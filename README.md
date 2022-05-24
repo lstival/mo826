@@ -280,7 +280,7 @@ superior a 70%.
 
 <div id="tab:resultados_01">
 
-| **Resultas para o conjunto 01** |              |                         |
+| **Resultados para o conjunto 01** |              |                         |
 |:--------------------------------|:------------:|:-----------------------:|
 | **Modelo**                      | **Acurácia** | **Acurácia Balanceada** |
 | Regressão                       |     71%      |           66%           |
@@ -303,7 +303,7 @@ quando comparado com a Regressão Logística.
 
 <div id="tab:resultados_02">
 
-| **Resultas para o conjunto 02** |              |                         |
+| **Resultados para o conjunto 02** |              |                         |
 |:--------------------------------|:------------:|:-----------------------:|
 | **Modelo**                      | **Acurácia** | **Acurácia Balanceada** |
 | Regressão                       |     72%      |           66%           |
@@ -323,7 +323,7 @@ generalização dos valores de predição dos classificadores
 
 <div id="tab:resultados_01_no_02">
 
-| **Resultas para o treinamento em 01 e teste no conjunto 02** |              |                         |
+| **Resultados para o treinamento em 01 e teste no conjunto 02** |              |                         |
 |:-------------------------------------------------------------|:------------:|:-----------------------:|
 | **Modelo**                                                   | **Acurácia** | **Acurácia Balanceada** |
 | Regressão                                                    |     67%      |           66%           |
@@ -341,7 +341,7 @@ XGBoost obteve uma melhoria em seus resultados.
   [3]: #tab:resultados_02_no_01
 <div id="tab:resultados_02_no_01">
 
-| **Resultas para o treinamento em 02 e teste no conjunto 01** |              |                         |
+| **Resultados para o treinamento em 02 e teste no conjunto 01** |              |                         |
 |:-------------------------------------------------------------|:------------:|:-----------------------:|
 | **Modelo**                                                   | **Acurácia** | **Acurácia Balanceada** |
 | Regressão                                                    |     81%      |           79%           |
