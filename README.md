@@ -408,6 +408,7 @@ temporais para identificar sazonalidades nos casos de óbitos, ou
 procurar por correlações entre os períodos (manhã, tarde e noite) em que
 eventos ocorrem a pacientes que faleçam.
 
+# Referências Bibliográficas
 
 CHEN, T.; GUESTRIN, C. Xgboost: A scalable tree boosting system. In: Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining. EUA: XGBoost, 2016. p. 785–794.
 
