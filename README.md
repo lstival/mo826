@@ -407,53 +407,10 @@ Uma abordagem diferente poderia ser aplicada, utilizando séries
 temporais para identificar sazonalidades nos casos de óbitos, ou
 procurar por correlações entre os períodos (manhã, tarde e noite) em que
 eventos ocorrem a pacientes que faleçam.
-@articlesyntheia, author = Walonoski, Jason and Kramer, Mark and
-Nichols, Joseph and Quina, Andre and Moesel, Chris and Hall, Dylan and
-Duffett, Carlton and Dube, Kudakwashe and Gallagher, Thomas and
-McLachlan, Scott, title = "Synthea: An approach, method, and software
-mechanism for generating synthetic patients and the synthetic electronic
-health care record", journal = Journal of the American Medical
-Informatics Association, volume = 25, number = 3, pages = 230-238, year
-= 2017, month = 08, abstract = "Our objective is to create a source of
-synthetic electronic health records that is readily available; suited to
-industrial, innovation, research, and educational uses; and free of
-legal, privacy, security, and intellectual property restrictions.We
-developed Synthea, an open-source software package that simulates the
-lifespans of synthetic patients, modeling the 10 most frequent reasons
-for primary care encounters and the 10 chronic conditions with the
-highest morbidity in the United States.Synthea adheres to a previously
-developed conceptual framework, scales via open-source deployment on the
-Internet, and may be extended with additional disease and treatment
-modules developed by its user community. One million synthetic patient
-records are now freely available online, encoded in standard formats
-(eg, Health Level-7 \[HL7\] Fast Healthcare Interoperability Resources
-\[FHIR\] and Consolidated-Clinical Document Architecture), and
-accessible through an HL7 FHIR application program interface.Health care
-lags other industries in information technology, data exchange, and
-interoperability. The lack of freely distributable health records has
-long hindered innovation in health care. Approaches and tools are
-available to inexpensively generate synthetic health records at scale
-without accidental disclosure risk, lowering current barriers to entry
-for promising early-stage developments. By engaging a growing community
-of users, the synthetic data generated will become increasingly
-comprehensive, detailed, and realistic over time.Synthetic patients can
-be simulated with models of disease progression and corresponding
-standards of care to produce risk-free realistic synthetic health care
-records at scale.", issn = 1527-974X, doi = 10.1093/jamia/ocx079, url =
-https://doi.org/10.1093/jamia/ocx079, eprint =
-https://academic.oup.com/jamia/article-pdf/25/3/230/34150150/ocx079.pdf,
-@inproceedingsxgboost, title=Xgboost: A scalable tree boosting system,
-author=Chen, Tianqi and Guestrin, Carlos, booktitle=Proceedings of the
-22nd acm sigkdd international conference on knowledge discovery and data
-mining, pages=785–794, year=2016, address = EUA, publisher = XGBoost
 
-@bookbook_ML, author = Gron, Aurlien, title = Hands-On Machine Learning
-with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to
-Build Intelligent Systems, year = 2017, isbn = 1491962291, publisher =
-O’Reilly Media, Inc., edition = 1st, address = EUA
 
-@bookpedrini2008, title=Análise de imagens digitais: princı́pios,
-algoritmos e aplicações, author=Pedrini, H. and Schwartz, W.R.,
-isbn=9788522105953,
-url=https://books.google.com.br/books?id=13KAPgAACAAJ, year=2008,
-publisher=Thomson Learning
+CHEN, T.; GUESTRIN, C. Xgboost: A scalable tree boosting system. In: Proceedings of the 22nd acm sigkdd international conference on knowledge discovery and data mining. EUA: XGBoost, 2016. p. 785–794.
+
+GRON, A. Hands-On Machine Learning with Scikit-Learn and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems. 1st. ed. EUA: O’Reilly Media, Inc., 2017. ISBN 1491962291.
+
+WALONOSKI, J. et al. Synthea: An approach, method, and software mechanism for generating synthetic patients and the synthetic electronic health care record. Journal of the American Medical Informatics Association, v. 25, n. 3, p. 230–238, 08 2017. ISSN 1527-974X. Disponível em: <https://doi.org/10.1093/jamia/ocx079>.
