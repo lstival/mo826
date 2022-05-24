@@ -350,7 +350,7 @@ XGBoost obteve uma melhoria em seus resultados.
 
 **Table 6** - Resultados obtidos após o treinamento dos classificadores no conjunto 02
 e testado no conjunto 01, diferente do resultado da
-Tabela [\[tab:resultados_01_no_02\]][1] a regressão manteve uma
+Tabela 5 a regressão manteve uma
 consistência melhor que XGBoost, mas ambos possuem valores aceitaveis
 
 </div>
