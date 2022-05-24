@@ -113,7 +113,7 @@ foram selecionados aqueles que ao menos uma vez tiveram em seu registro
 um encontro cujo motivo fosse apresentado no top dez em mortalidade, a
 lista dos motivos utilizados no conjunto 01 é apresentando na
 Tabela [1][] já o conjunto 02 é representado pela
-Tabela [\[tab:motivos_morte\]][2].
+Tabela 2.
 
 <div id="tab:motivos_morte_01">
 
@@ -199,8 +199,7 @@ nosso alvo foram realizados os seguintes paços.
 
 1.  Selecionado os pacientes com ao menos um encontro onde o motivo está
     presente na lista de maior taxa de letalidade apresentado na
-    Tabela [\[tab:motivos_morte\]][1] ou
-    Tabela [\[tab:motivos_morte_01\]][2] dependendo do conjunto.
+    Tabela 2 ou Tabela 1 dependendo do conjunto.
 
 2.  Selecionado a data do último evento do paciente.
 
@@ -319,7 +318,7 @@ para o conjunto 01 os valores de acurácia balanceada são inferiores.
 
 Os resultados alternando o conjunto de treino com o teste apresentaram
 resultados tão bons quanto em seus respectivos conjuntos de testes, as
-tabelas [2][] e [\[tab:resultados_02_no_01\]][3] apresentam confirmar a
+tabelas 5 e 6 apresentam confirmar a
 generalização dos valores de predição dos classificadores
 
 <div id="tab:resultados_01_no_02">
