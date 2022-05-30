@@ -55,8 +55,8 @@ Título do Dataset | http://base1.org/ | Breve resumo (duas ou três linhas) sob
 > Esta seção opcionalmente pode ser apresentada em conjunto com o método.
 
 
-| **Resultados para o conjunto 02** |              |                         |
+| **Resultados para o conjunto 01** |              |                         |
 |:--------------------------------|:------------:|:-----------------------:|
 | **Modelo**                      | **Acurácia** | **Acurácia Balanceada** |
-| Regressão                       |     80%      |           70%           |
-| XGBoost                         |     80%      |           70%           |
+| Regressão                       |     86%      |           82%           |
+| XGBoost                         |     71%      |           71%           |
