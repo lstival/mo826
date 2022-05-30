@@ -53,3 +53,10 @@ Título do Dataset | http://base1.org/ | Breve resumo (duas ou três linhas) sob
 > Apresente os resultados obtidos pela sua adaptação.
 > Confronte os seus resultados com aqueles do artigo.
 > Esta seção opcionalmente pode ser apresentada em conjunto com o método.
+
+
+| **Resultados para o conjunto 02** |              |                         |
+|:--------------------------------|:------------:|:-----------------------:|
+| **Modelo**                      | **Acurácia** | **Acurácia Balanceada** |
+| Regressão                       |     80%      |           70%           |
+| XGBoost                         |     80%      |           70%           |
