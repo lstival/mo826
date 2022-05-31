@@ -55,12 +55,12 @@ Título do Dataset | http://base1.org/ | Breve resumo (duas ou três linhas) sob
 > Esta seção opcionalmente pode ser apresentada em conjunto com o método.
 
 
-| **Conjunto 02**    |  **Previsto** |   **Regressão**    |
-| **Real**           | **Negativo**  |    ** Positivo**   | 
-| **Negativo**       |      10       |           0        |
-| **Positivo**       |       3       |           2        |
-|:-------------------|:-------------:|:------------------:|
-|                    |  **Previsto** |     **XGBoost**    |
-| **Real**           | **Negativo**  |    ** Positivo**   | 
-| **Negativo**       |      10       |           0        |
-| **Positivo**       |       3       |           2        |
+|**Conjunto 01**|                    |   Previsto    |      Previsto      |
+|:-------------:|:------------------:|:-------------:|:------------------:|
+|               |   **Regressão**    | **Negativo**  |    **Positivo**    | 
+| **Real**      | **Negativo**       |      13       |           1        |
+| **Real**      | **Positivo**       |       2       |           5        |
+|               |                    | **Previsto**  |    **Previsto**    |
+|               |   **XGBoost**      | **Negativo**  |    **Positivo**    | 
+|**Real**       | **Negativo**       |      10       |           4        |
+|**Real**       | **Positivo**       |       2       |           5        |
