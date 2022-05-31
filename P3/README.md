@@ -32,7 +32,9 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 | Leandro Stival             | 263013 |     Computação     |
 
 # Referência bibliográfica do artigo lido
-> Coloque aqui a referência bibliográfica do artigo lido, incluindo o link para o site.
+Malik, H. A. M., Mahesar, A. W., Abid, F., Waqas, A., & Wahiddin, M. R. (2017). Two-mode network modeling and analysis of dengue epidemic behavior in Gombak, Malaysia. Applied Mathematical Modelling, 43, 207-220.
+
+https://www.sciencedirect.com/science/article/pii/S0307904X16305753
 
 # Resumo
 > Escreva um breve do artigo (com as suas palavras, não deve ser copiado texto do artigo).
@@ -43,7 +45,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 ## Dados usados como entrada
 Dataset | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-Dataset of dengue patients in Selangor | [http://base1.org/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6689515/pdf/hir-25-182.pdf) | Dataset contendo duas informações, a sigla das regiões na málasia com os casos de dengue e a quantidade de casos, essas informações formam um grafo bipartido, que no trabalho original foi projetado ligando as reigões quando elas possuisem a mesma quantidade de casos (dados disponiveis no Apendice 1 do artigo).
+Dataset of dengue patients in Selangor | [[http://base1.org/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6689515/pdf/hir-25-182.pdf)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6689515/pdf/hir-25-182.pdf) | Dataset contendo duas informações, a sigla das regiões na málasia com os casos de dengue e a quantidade de casos, essas informações formam um grafo bipartido, que no trabalho original foi projetado ligando as reigões quando elas possuisem a mesma quantidade de casos (dados disponiveis no Apendice 1 do artigo).
 
 # Método
 > Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos.
