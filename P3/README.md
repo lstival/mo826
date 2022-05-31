@@ -3,7 +3,7 @@
 # Projeto 3 - Reproduzindo o Experimento de um Artigo Científico
 
 O objetivo geral do projeto é reproduzir um experimento (total ou parcialmente) de um artigo científico. O tema do artigo deve estar relacionado a Ciência de Redes e Saúde. Poderão ser aceitos artigos cujos temas que tangenciam a área de saúde. Temas de artigos envolvendo ciência de redes em outros domínios deverão ser negociados previamente com os professores.
-
+<!-- 
 Recomenda-se o seguinte índice para encontrar artigos com dados de redes publicados: (https://icon.colorado.edu/#!/networks)[https://icon.colorado.edu/#!/networks]
 
 A equipe tem a liberdade de adaptar e simplificar o experimento, conforme a disponibilidade dos dados, dos algoritmos e do grau de dificuldade na reprodução.
@@ -19,7 +19,7 @@ Segue abaixo o modelo de como deve ser documentada a entrega.
 
 Se o relatório for feito em um notebook, o modelo a seguir pode ser colocado dentro do notebook diretamente. Nesse caso, coloque no markdown do projeto (fora do notebook) uma cópia dos dados até a seção de `Apresentação` e um link para o notebook com o relatório.
 
-# Modelo Relatório Final de Projeto P3
+# Modelo Relatório Final de Projeto P3 -->
 
 # Apresentação
 
@@ -63,8 +63,6 @@ A construção da rede bipartida e as formas de representar a projeção foram i
 
 Além da biblioteca _NetworkX_ o software _Gephi_ foi utilizado para apresentar de forma visual uma das projeções, para ilustar aquilo que os autores do artigo concluíram ao análisar a rede, para isso exportarmos uma das nossas projeções através do método _write_gexf_ disponível na _NetworkX_, o que possibilitou a utilização desse software para complementar nossos resultados.
 
-### Abordagem e análise
-
 ### Algoritmos
 Em pose dos dados toda a implementação realizada desde a construção da rede até a representação gráfica dos grupos com as maiores quantidade de casos, pode ser resumida a XXX etapas, sendo elas: Leitura e tratamento dos dados, construção da rede bipartida, projeção da rede bipartida, obtenção da força dos vértices e representação visual da força dos vértices.
 
@@ -72,10 +70,23 @@ Mesmo os dados sendo fornecidos diretamente de um artigo foram necessárias algu
 
 Utilizando a projeção como ponto de partida foram aplicadas as três formas de criar os pesos, a mais básica são os pesos binários, onde cada aresta recebeu o peso 1 para representar a ligação entre os vértices e 0 quanto não existe uma aresta (como não existem arestas que não conectam dois vértices, logo todas possuem peso 1), uma forma um pouco sofistica é os pesos através da soma, que nada mais é que o peso da aresta ser a quantidade de casos que ela região possui e a última forma implementada foi a NewMan que se asemelha com a soma, com a única diferença que os valores são normalizadas.
 
-> Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos.
-> Etapas do processo reproduzido.
+Em pose de todas as implementações foi implementada a Centralidade de Freeman's que no artigo é denominada como força do vértice, essa medida foi aplicada a todos os vértices da projeções por soma e NewMan, esses valores básicamente representam a soma de todos os peso das arestas que incidem em um vértices, como a rede é direcionada essa métrica se torna interessante de ser aplicada para identificar o fluxo dentro da rede (segundo os autores).
+
+Assim como no artigo original foi apresentado um histograma contendo os dados das representações para as localidade de prefixo _GL_, realizarmos uma pequena alteração na imagem (uma linha horizontal vermelha) para facilitar identificar quais regiões possuem os valores acima de 80\% dos casos.
+
+### Abordagem e análise
+
+Visando mantem a maior coêrencia possível com o artigo original reproduzimos as mesmas formas de forma manuaç (sem utilizar de métodos presentes nas bibliotecas) para
+tornar os resultados mais pareaveis o possível (considerando as limitações da fonte de dados e grupos adicionais). Assim análisamos quais são os principais grupos (vértices com maior força) e obtivemos as mesmas conclusões que o artigo original.
+
+<!-- > Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos.
+> Etapas do processo reproduzido. -->
 
 # Resultados
+
+Um ponto de atenção é que como os dados não parecer ser exatamente os mesmos dos exemplos apresentados no artigo, nossos resultados não batem exatamente com o do artigo, porém, apresentam uma grande semelhança no comportamento (alguns grupos que apresentam uma quantidade grande casos estão interligados e existem regiões com poucos casos isoladas), assim podemos concluir que os resultados não são os mesmos, mas apresentam certa correlação.
+Focamos em comparar os grupos de reigões definidas como _GL_ uma vez que existem outras duas siglas presentes nos dados disponibilizados, porém elas não citadas no artigo (acreditamos que seja uma extenção da base de dados original).
+
 > Apresente os resultados obtidos pela sua adaptação.
 > Confronte os seus resultados com aqueles do artigo.
 > Esta seção opcionalmente pode ser apresentada em conjunto com o método.
