@@ -87,6 +87,13 @@ tornar os resultados mais pareaveis o possível (considerando as limitações da
 Um ponto de atenção é que como os dados não parecer ser exatamente os mesmos dos exemplos apresentados no artigo, nossos resultados não batem exatamente com o do artigo, porém, apresentam uma grande semelhança no comportamento (alguns grupos que apresentam uma quantidade grande casos estão interligados e existem regiões com poucos casos isoladas), assim podemos concluir que os resultados não são os mesmos, mas apresentam certa correlação.
 Focamos em comparar os grupos de reigões definidas como _GL_ uma vez que existem outras duas siglas presentes nos dados disponibilizados, porém elas não citadas no artigo (acreditamos que seja uma extenção da base de dados original).
 
+A representação gráfica através do histograma nos possibilitou comparar os resultados com o artigo original, e observamos que assim como eles nossas projeções possuem grupos com grande quantidade de casos conectados em sí, e grupos onde poucos casos estão presentes acabam se isolando. O que confirma a teoria de _clustering_ entre reigões que tem muitos casos, e atuar diretamente nelas (procurando por focos dengue) pode resolver o problema de forma mais efetiva (devido a tendência de espalhamento como citam os autores do artigo).
+
+A única diferença é que algumas reigões aparesem diferentes entre o orginal e a nossa releitura, provavelmente devido a alguma alteração dos dados entre os que foram utilizados no artigo e nos que foram disponibilizados posterioremente.
+
+* Maiores detalhes das fórmulas e os valores dos principais grupos estão presentes no [_Notebook_](https://github.com/lstival/mo826/blob/main/P3/P3_MO826.ipynb)*
+<!-- 
+
 > Apresente os resultados obtidos pela sua adaptação.
 > Confronte os seus resultados com aqueles do artigo.
 > Esta seção opcionalmente pode ser apresentada em conjunto com o método.
@@ -100,4 +107,4 @@ Focamos em comparar os grupos de reigões definidas como _GL_ uma vez que existe
 |               |                    | **Previsto**  |    **Previsto**    |
 |               |   **XGBoost**      | **Negativo**  |    **Positivo**    | 
 |**Real**       | **Negativo**       |      10       |           4        |
-|**Real**       | **Positivo**       |       2       |           5        |
+|**Real**       | **Positivo**       |       2       |           5        | -->
