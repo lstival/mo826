@@ -43,7 +43,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 ## Dados usados como entrada
 Dataset | Endereço na Web | Resumo descritivo
 ----- | ----- | -----
-Título do Dataset | http://base1.org/ | Breve resumo (duas ou três linhas) sobre o dataset.
+Dataset of dengue patients in Selangor | [http://base1.org/](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6689515/pdf/hir-25-182.pdf) | Dataset contendo duas informações, a sigla das regiões na málasia com os casos de dengue e a quantidade de casos, essas informações formam um grafo bipartido, que no trabalho original foi projetado ligando as reigões quando elas possuisem a mesma quantidade de casos (dados disponiveis no Apendice 1 do artigo).
 
 # Método
 > Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos.
