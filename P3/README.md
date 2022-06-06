@@ -68,7 +68,7 @@ Em pose dos dados, toda a implementação realizada desde a construção da rede
 
 Mesmo os dados sendo fornecidos diretamente de um artigo, foi necessário o uso de algumas técnicas de pré-processamento, nesse caso foi a remoção de informações duplicadas. Feito isso a construção da rede bipartida se deu ligando o vértice de cada grupo com o vértice que representava a quantidade de casos que ele apresentou. A projeção foi implementada interligando os grupos que possuiam ligações com a mesma quantidade de casos.
 
-Utilizando a projeção como ponto de partida, foram aplicadas as três formas de criar os pesos, a mais básica são os pesos binários, onde cada aresta recebeu o peso 1 para representar a ligação entre os vértices e 0 quando não existe uma aresta (como não existem arestas que não conectam dois vértices, logo todas possuem peso 1). Uma forma um pouco XXXsofistica é os pesos através da soma, que nada mais é que o peso da aresta ser a quantidade de casos que essa região possui. A última forma implementada foi a NewMan que se assemelha com a soma, com a única diferença que os valores são normalizadas.
+Utilizando a projeção como ponto de partida, foram aplicadas as três formas de criar os pesos, a mais básica são os pesos binários, onde cada aresta recebeu o peso 1 para representar a ligação entre os vértices e 0 quando não existe uma aresta (como não existem arestas que não conectam dois vértices, logo todas possuem peso 1). Uma forma um pouco sofisticada é os pesos através da soma, que nada mais é que o peso da aresta ser a quantidade de casos que essa região possui. A última forma implementada foi a NewMan que se assemelha com a soma, com a única diferença que os valores são normalizadas.
 
 Em posse de todas as implementações, foi feita a Centralidade de Freeman's que no artigo é denominada como força do vértice, essa medida foi aplicada a todos os vértices das projeções por soma e NewMan, esses valores basicamente representam a soma de todos os peso das arestas que incidem em um vértice. Como a rede é direcionada, essa métrica se torna interessante de ser aplicada para identificar o fluxo dentro da rede (segundo os autores).
 
@@ -76,7 +76,7 @@ Assim como no artigo original, foi apresentado um histograma contendo os dados d
 
 ### Abordagem e análise
 
-Visando manter a maior coêrencia possível com o artigo original, reproduzimos as mesmas formas manualmente (sem utilizar de métodos presentes nas bibliotecas) para tornar os resultados mais XXXpareaveis o possível (considerando as limitações da fonte de dados e grupos adicionais). Assim, analisamos quais são os principais grupos (vértices com maior força) e obtivemos as mesmas conclusões que o artigo original.
+Visando manter a maior coêrencia possível com o artigo original, reproduzimos as mesmas formas manualmente (sem utilizar de métodos presentes nas bibliotecas) para tornar os resultados mais pareáveis o possível (considerando as limitações da fonte de dados e grupos adicionais). Assim, analisamos quais são os principais grupos (vértices com maior força) e obtivemos as mesmas conclusões que o artigo original.
 
 <!-- > Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos.
 > Etapas do processo reproduzido. -->
