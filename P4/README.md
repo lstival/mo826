@@ -1,25 +1,10 @@
 # Equipe ATOM
 
-# Projeto 3 - Reproduzindo o Experimento de um Artigo Científico
+# Projeto 4 - Reproduzindo o Experimento de um Artigo Científico
 
-O objetivo geral do projeto é reproduzir um experimento (total ou parcialmente) de um artigo científico. O tema do artigo deve estar relacionado a Ciência de Redes e Saúde. Poderão ser aceitos artigos cujos temas que tangenciam a área de saúde. Temas de artigos envolvendo ciência de redes em outros domínios deverão ser negociados previamente com os professores.
-<!-- 
-Recomenda-se o seguinte índice para encontrar artigos com dados de redes publicados: (https://icon.colorado.edu/#!/networks)[https://icon.colorado.edu/#!/networks]
+O objetivo geral do projeto é concluir se pacientes com pacientes de Lúpus Eritematoso Sistêmico (SLE) possuem lesões mais semelhantes a lesões isquêmicas ou desmielinizantes, para isso foi optado por utilizar um classicador SVM, pois, os resultados nos dados preliminares demonstraram uma ótima eficiência para separar as classe, e por possuir uma complexbilidade menor e explicabilidade mais fácil foi escolhido como solução.
 
-A equipe tem a liberdade de adaptar e simplificar o experimento, conforme a disponibilidade dos dados, dos algoritmos e do grau de dificuldade na reprodução.
-
-Para a reprodução do experimento, pode ser usada qualquer ferramenta/framework de processamento de redes complexas.
-
-O trabalho será feito em equipes (preferencialmente as mesmas do P2).
-
-## Instruções para o Relatório Final
-
-Segue abaixo o modelo de como deve ser documentada a entrega.
-> Tudo o que aparece neste modo de citação, ou indicado entre `<...>`, se refere a algo que deve ser substituído pelo indicado. No modelo são colocados exemplos ilustrativos, que serão substituídos pelos do seu projeto.
-
-Se o relatório for feito em um notebook, o modelo a seguir pode ser colocado dentro do notebook diretamente. Nesse caso, coloque no markdown do projeto (fora do notebook) uma cópia dos dados até a seção de `Apresentação` e um link para o notebook com o relatório.
-
-# Modelo Relatório Final de Projeto P3 -->
+Além disso, foi utilizada a biblioteca SHAP que computa a "importância" de cada atributo para o classificador, dessa forma tornando o resultado do modelo mais claro, permitindo assim encontrar relações entre o que foi aprendido com o treinamento e caracteristica da imagem médica assim permitindo que o profissional da saúde interessado nesse tipo de análise possa comprender e confiar (considerando que ele possuí dominio sobre o problema) nos resultados obtidos pelo grupo.
 
 # Apresentação
 
@@ -30,11 +15,6 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 | **Nome**                   | **RA** | **Especialização** |
 | Fabrício Ferreira da Silva | 231900 |     Computação     |
 | Leandro Stival             | 263013 |     Computação     |
-
-# Referência bibliográfica do artigo lido
-Malik, H. A. M., Mahesar, A. W., Abid, F., Waqas, A., & Wahiddin, M. R. (2017). Two-mode network modeling and analysis of dengue epidemic behavior in Gombak, Malaysia. Applied Mathematical Modelling, 43, 207-220.
-
-https://www.sciencedirect.com/science/article/pii/S0307904X16305753
 
 # Resumo
 <!-- > Escreva um breve do artigo (com as suas palavras, não deve ser copiado texto do artigo). -->
