@@ -70,19 +70,35 @@ Normalizar os dados dos atributos obtidos também foi uma decisão importante, p
   Além disso, o SHAP foi uma escolha para facilitar entendermos o que foi aprendido pelo modelo e criar eventuais explicações para um interessado que seja de fora da computação, dado que o nosso objetivo é tornar esse estudo o mais abrangente possível, não nos fechando ao escopo da computação.
 
 # Resultados Obtidos e Discussão
-> Esta seção deve apresentar o resultado de predição das lesões de LES usando o classificador treinado. Também deve tentar explicar quais os atributos relevantes usados na classificação obtida
-> * apresente os resultados de forma quantitativa e qualitativa
-> * tenha em mente que quem irá ler o relatório é uma equipe multidisciplinar. Descreva questões técnicas, mas também a intuição por trás delas.
+Utilizando das 450 imagens fornecidas para validar de lesões LES, aplicando o mesmo _pipeline_ dos demais dados e realizando a inferência com o modelo SVM treinando, obtidos os seguintes resultados:
+
+| **Lesões LES**  ||     | 
+|:--------|:------:|:---:|
+| AVC     | 79     | 35% |
+| EM      | 146    | 65% |
+
+Onde podemos observar que ambas as classes foram selecionadas pelo classificador, porém, com uma tendência da maioria delas se assemelhar a lesões EM, para identificar como essa separação foi realizada utilizamos a biblioteca _SHAP_ que utiliza de _Shapley values_ sendo essa uma técnica de teoria de jogos, onde se computa o ganho coletivo conforme a contribuição de cada participante.
+No caso de explicar um classificador, a biblioteca "simula" os resultados obtidos, porém, alterando os valores das entradas ou até mesmo as ocultando com o intuído de computar "qual o impacto no resultado caso não se utilizasse algum atributo" ou "como valores acima da média das demais desse conjunto impactam no resultado".
+Dessa forma foi obtido o seguinte ranking de importância de cada atributo para o classificador:
+
+**<IMAGEM DAS MÈTRICAS>**
+
+A figura demonstra que a correlação entre os pixels na matriz de co-ocorrência e a homogeneidade dos valores foram as métricas com maior impacto no momento da classificação das imagens, criando assim limiares que nos permitem identificar visualmente essa separação. O gráfico pode ser lido onde valores em azul representam valores para o atributo menor do que a média do conjunto, em quando os valores em rosa são superiores.
+
+Logo podemos notar que para classificar uma amostra como lesão EM, a correlação entre os pixels na matriz de co-ocorrência deve ser baixa (grande volume de pontos azuis aglutinados no quanto superior direito), assim como a homogeneidade deve ser alta (devido a praticamente todos os pontos em tons de rosa estarem presentes do lado direito do eixo X).
+
+Uma possível interpretação da correlação nesse escopo é a presença de padrões na textura da imagem, sendo assim, aparentemente lesões EM (logo as LES também devido à similaridade) possuem uma maior não regularidade nos padrões das lesões.
+Já os alores de homogeneidade mostram o quão unidos estão essas regiões de tons iguais ou parecidos, como as lesões EM possuem os valores acima da média do conjunto, isso pode indicar que esse tipo de lesão é praticamente uniforme sem interrupções, confirmando a possível interpretação da correlação.
 
 # Conclusão
-  Após a idealização e implementação deste trabalho foi possível concluir que as amostras de Lúpus possuem em sua maioria semelhança com XXX classe de imagens segundo nosso classificador SVM.
+  Após a idealização e implementação deste trabalho foi possível concluir que as amostras de Lúpus possuem em sua maioria semelhança com as lesões EM sendo essa a classe de imagens segundo nosso classificador SVM mais a classificou. 
+  Considerando os resultados obtidos e as interpretações realizadas por nós, podemos concluir que as lesões LES possuem regiões mais uniformes (de forma contínua na imagem) e com um padrão de textura único (para não apresentar falhas devido à lesão ser uniforme).
   
-  
-> Destacar as principais conclusões obtidas no desenvolvimento do projeto.
->
-> Destacar os principais desafios enfrentados.
->
-> Principais lições aprendidas.
->
+> Principais desafios enfrentados:
+Durante a implementação os maiores desafios foram identificar qual a melhor forma de obter os atributos que tínhamos em mente para classificar as imagens, assim como entender o problema, devido a nossa não familiaridade em trabalhar com imagens desse tipo.
+
+> Lições aprendidas:
+Durante a implementação adquirimos conhecimentos técnicos sobre processamento de imagens, como, formas de representar imagens sem utilizar a matriz dos pixels, como são realizadas as extrações de imagens médicas além do conhecimento mais específico sobre a área do problema (imagens de lesões cerebrais).
+
 > Trabalhos Futuros:
-> * o que poderia ser melhorado se houvesse mais tempo?
+Possíveis melhorias e até mesmo continuações para esse trabalho seriam: identificar com mais profundidade a importância de cada atributo para o classificador, para que o entendimento sobre o problema se torne mais robusta, permitindo a sua aplicação em casos reais. Utilizar a CNN que aproveitamos a implementação fornecida pelos professores, porém, que não optamos em utilizar devido a já possuímos um classificador com uma robustez aceitável e explicabilidade mais simples.
