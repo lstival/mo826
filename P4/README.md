@@ -20,7 +20,7 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 
 O lúpus é uma doença autoimune, o que significa que o nosso sistema imunitário (sistema de defesa) ataca os tecidos próprios, órgãos e células saudáveis do organismo. O lúpus eritematoso sistémico é a forma mais grave da doença, atingindo múltiplas partes do organismo, podendo surgir diversas complicações, fundamentalmente se não existir tratamento adequado e atempado.
 
-Considerando a gravidade que essa doença por ter, o foco desse projeto é analisar as lesões que essa doença causa no cérebro e descobrir se elas são mais se assemelham com lesões isquêmicas ou desmielinizantes.
+Considerando a gravidade que essa doença pode ter, o foco desse projeto é analisar as lesões que essa doença causam no cérebro e descobrir se elas se assemelham mais com lesões isquêmicas ou desmielinizantes.
 Para isso foram treinadas duas redes, uma usando CNN e outra usando SVM, colocando como entrada imagens de cérebros com lesões isquêmicas e desmielinizantes. Após a etapa de treinamento e validação dos modelos, foi utilizado como conjunto de teste imagens de lesões causadas pela SLE, e a partir desses resultados concluir com qual de ambas ela é mais parecida, junto da análise de como o classificador aprendeu a diferenciar as imagens. Esse processo será explicado a seguir.
 
 
