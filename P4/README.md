@@ -81,7 +81,8 @@ Onde podemos observar que ambas as classes foram selecionadas pelo classificador
 No caso de explicar um classificador, a biblioteca "simula" os resultados obtidos, porém, alterando os valores das entradas ou até mesmo as ocultando com o intuído de computar "qual o impacto no resultado caso não se utilizasse algum atributo" ou "como valores acima da média das demais desse conjunto impactam no resultado".
 Dessa forma foi obtido o seguinte ranking de importância de cada atributo para o classificador:
 
-**<IMAGEM DAS MÈTRICAS>**
+<!-- [svc_principais](https://user-images.githubusercontent.com/76977151/177785616-efb61470-4bd0-4a34-a1ff-d4343241415b.png) -->
+<img src="https://user-images.githubusercontent.com/76977151/177785616-efb61470-4bd0-4a34-a1ff-d4343241415b.png" alt="Ranking dos atributos para o classificador"/>
 
 A figura demonstra que a correlação entre os pixels na matriz de co-ocorrência e a homogeneidade dos valores foram as métricas com maior impacto no momento da classificação das imagens, criando assim limiares que nos permitem identificar visualmente essa separação. O gráfico pode ser lido onde valores em azul representam valores para o atributo menor do que a média do conjunto, em quando os valores em rosa são superiores.
 
