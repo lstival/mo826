@@ -1,25 +1,10 @@
 # Equipe ATOM
 
-# Projeto 3 - Reproduzindo o Experimento de um Artigo Científico
+# Projeto 4 – Classificação de lesões de substância branca no Lúpus
 
-O objetivo geral do projeto é reproduzir um experimento (total ou parcialmente) de um artigo científico. O tema do artigo deve estar relacionado a Ciência de Redes e Saúde. Poderão ser aceitos artigos cujos temas que tangenciam a área de saúde. Temas de artigos envolvendo ciência de redes em outros domínios deverão ser negociados previamente com os professores.
-<!-- 
-Recomenda-se o seguinte índice para encontrar artigos com dados de redes publicados: (https://icon.colorado.edu/#!/networks)[https://icon.colorado.edu/#!/networks]
+O objetivo do projeto é concluir se pacientes com Lúpus Eritematoso Sistêmico (SLE) possuem lesões como isquêmicas ou desmielinizantes. Para isso foi optado por utilizar um classificador SVM, pois, os resultados nos dados preliminares demonstraram uma ótima eficiência para separar as classes, e por possuir uma complexionalidade menor e explicabilidade mais fácil foi escolhido como solução.
 
-A equipe tem a liberdade de adaptar e simplificar o experimento, conforme a disponibilidade dos dados, dos algoritmos e do grau de dificuldade na reprodução.
-
-Para a reprodução do experimento, pode ser usada qualquer ferramenta/framework de processamento de redes complexas.
-
-O trabalho será feito em equipes (preferencialmente as mesmas do P2).
-
-## Instruções para o Relatório Final
-
-Segue abaixo o modelo de como deve ser documentada a entrega.
-> Tudo o que aparece neste modo de citação, ou indicado entre `<...>`, se refere a algo que deve ser substituído pelo indicado. No modelo são colocados exemplos ilustrativos, que serão substituídos pelos do seu projeto.
-
-Se o relatório for feito em um notebook, o modelo a seguir pode ser colocado dentro do notebook diretamente. Nesse caso, coloque no markdown do projeto (fora do notebook) uma cópia dos dados até a seção de `Apresentação` e um link para o notebook com o relatório.
-
-# Modelo Relatório Final de Projeto P3 -->
+Além disso, foi utilizada a biblioteca SHAP que computa a "importância" de cada atributo para o classificador, dessa forma tornando o resultado do modelo mais claro, permitindo assim encontrar relações entre o que foi aprendido com o treinamento e característica da imagem médica. Esse processo permite que o profissional da saúde interessado nessa análise possa compreender e confiar (considerando que ele possui domínio sobre o problema) nos resultados obtidos pelo grupo.
 
 # Apresentação
 
@@ -31,78 +16,90 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 | Fabrício Ferreira da Silva | 231900 |     Computação     |
 | Leandro Stival             | 263013 |     Computação     |
 
-# Referência bibliográfica do artigo lido
-Malik, H. A. M., Mahesar, A. W., Abid, F., Waqas, A., & Wahiddin, M. R. (2017). Two-mode network modeling and analysis of dengue epidemic behavior in Gombak, Malaysia. Applied Mathematical Modelling, 43, 207-220.
+# Introdução
 
-https://www.sciencedirect.com/science/article/pii/S0307904X16305753
+O lúpus é uma doença autoimune, o que significa que o nosso sistema imunitário (sistema de defesa) ataca os tecidos próprios, órgãos e células saudáveis do organismo. O lúpus eritematoso sistémico é a forma mais grave da doença, atingindo múltiplas partes do organismo, podendo surgir diversas complicações, fundamentalmente se não existir tratamento adequado e atempado.
 
-# Resumo
-<!-- > Escreva um breve do artigo (com as suas palavras, não deve ser copiado texto do artigo). -->
-Este artigo trabalhou com dados sobre casos de dengue na malásia, principalmente na região de Gombak onde segundo estudos citados, vem sofrendo com a grande quantidade de casos desde do começo da década passada. Dessa forma, os casos de dengue por distrito foram agrupados e modelados como uma rede bipartida com pesos, sendo o primeiro conjunto de vértices os grupos _clusteres_ de casos e o segundo grupo a quantidade de casos, em seguida foi realizada a projeção isolando as regiões em uma rede separada, os pesos para a rede projetada foram realizadas de três maneiras distintas, forma binária, por soma e NewMan.
-
-Com a projeção dos grupos construída, foram realizadas diversas métricas como: força de cada vértice (Centralidade de Freeman's), clusterização, distância e centralidade, e realizando a análise dos valores obtidos e as cruzando com informações geográficas de cada região com casos, foi possível concluir que essas métricas se mostraram efetivas em localizar as principais reigões (com maior quantidade de casos) e que elas estavam interligadas, assim, fornecendo informações importantes para os orgãos competentes atuarem nesses locais de maior incidência de casos.
-
-# Breve descrição do experimento/análise do artigo que foi replicado
-Das várias métricas apresentadas pelo artigo, a força dos vértices para os três tipos de projeções foi a selecionada para ser repliacada, com o objetivo de replicar os principais grupos de casos de dengue, a entrada de dados foi a quantidade de casos que cada reigão registraram entre 2013 e 2014, que foi projetada como uma rede bipartida com pesos, já a saída é as quais os grupos com maior força de vértice para cada representação junto da apresentação gráfica dessa informação.
-
-<!-- > Descreva brevemente a parte do artigo cujo experimento ou análise foi reproduzido. Explique o que foi usado como entrada e saída. -->
-
-## Dados usados como entrada
-Dataset | Endereço na Web | Resumo descritivo
------ | ----- | -----
-Dataset of dengue patients in Selangor | [https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6689515/pdf/hir-25-182.pdf](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6689515/pdf/hir-25-182.pdf) | Dataset contendo duas informações, a sigla das regiões na mlásia com os casos de dengue e a quantidade de casos, essas informações formam um grafo bipartido, que no trabalho original foi projetado ligando as reigões quando elas possuisem a mesma quantidade de casos (dados disponiveis no Apendice 1 do artigo).
-
-# Método
-A implementação realizada para reproduzir o artigo selecionado teve algumas alterações, sendo elas: utilizar a base de dados dos mesmos autores, porém apresentada em outro artigo (dado que, os dados originais não se encontravam mais disponiveis), assim como a realização da representação visual da projeção do grafo, visto que realizamos ela através do software _Gephi_ devido a dificuldades técnicas com a biblioteca _networkX_. Outro ponto que demandou alterações foi a remoção de alguns vértices da rede, uma vez que eles se encontravam em duplicidade (quatro no total).
-
-Ademais, as equações e formas de tratamento dos dados (criação da rede e projeção) seguiram a risca como os autores originalmente a descreveram, porém, não foi possível implementar todas as métrica citadas no artigo devido ao tempo que foi demandando para encontram um artigo que possuísse base de dados disponível.
-
-### Ferramentas utilizadas
-
-A construção da rede bipartida e as formas de representar a projeção foram implementadas utilizando a biblioteca _NetworkX_ na linguagem de programação _Python_, onde já se encontram métodos prontos que facilitam a representação de uma rede, como: criação de grafos direcionados e não direcionados, onde ambos foram utilizados em nossa implementação (dado que, as projeções dos grupos são representações direcionados com pesos). Outra facilidade apresentada por essa biblioteca é a consulta das informações de um vértice (grau, vizinhos, centralidade, entre outros).
-
-Além da biblioteca _NetworkX_, o software _Gephi_ foi utilizado para apresentar de forma visual uma das projeções, para ilustar aquilo que os autores do artigo concluíram ao análisar a rede. Para isso, exportamos uma das nossas projeções através do método _write_gexf_ disponível na _NetworkX_, o que possibilitou a utilização desse software para complementar nossos resultados.
-
-### Algoritmos
-Em pose dos dados, toda a implementação realizada desde a construção da rede até a representação gráfica dos grupos com as maiores quantidade de casos, pode ser resumida a 5 etapas, sendo elas: Leitura e tratamento dos dados, construção da rede bipartida, projeção da rede bipartida, obtenção da força dos vértices e representação visual da força dos vértices.
-
-Mesmo os dados sendo fornecidos diretamente de um artigo, foi necessário o uso de algumas técnicas de pré-processamento, nesse caso foi a remoção de informações duplicadas. Feito isso a construção da rede bipartida se deu ligando o vértice de cada grupo com o vértice que representava a quantidade de casos que ele apresentou. A projeção foi implementada interligando os grupos que possuiam ligações com a mesma quantidade de casos.
-
-Utilizando a projeção como ponto de partida, foram aplicadas as três formas de criar os pesos, a mais básica são os pesos binários, onde cada aresta recebeu o peso 1 para representar a ligação entre os vértices e 0 quando não existe uma aresta (como não existem arestas que não conectam dois vértices, logo todas possuem peso 1). Uma forma um pouco sofisticada é os pesos através da soma, que nada mais é que o peso da aresta ser a quantidade de casos que essa região possui. A última forma implementada foi a NewMan que se assemelha com a soma, com a única diferença que os valores são normalizadas.
-
-Em posse de todas as implementações, foi feita a Centralidade de Freeman's que no artigo é denominada como força do vértice, essa medida foi aplicada a todos os vértices das projeções por soma e NewMan, esses valores basicamente representam a soma de todos os peso das arestas que incidem em um vértice. Como a rede é direcionada, essa métrica se torna interessante de ser aplicada para identificar o fluxo dentro da rede (segundo os autores).
-
-Assim como no artigo original, foi apresentado um histograma contendo os dados das representações para as localidades de prefixo _GL_. Realizamos uma pequena alteração na imagem (uma linha horizontal vermelha) para facilitar a identificação de quais regiões possuem os valores acima de 80% dos casos.
-
-### Abordagem e análise
-
-Visando manter a maior coêrencia possível com o artigo original, reproduzimos as mesmas formas manualmente (sem utilizar de métodos presentes nas bibliotecas) para tornar os resultados mais pareáveis o possível (considerando as limitações da fonte de dados e grupos adicionais). Assim, analisamos quais são os principais grupos (vértices com maior força) e obtivemos as mesmas conclusões que o artigo original.
-
-<!-- > Método usado para a análise -- adaptações feitas, ferramentas utilizadas, abordagens de análise adotadas e respectivos algoritmos.
-> Etapas do processo reproduzido. -->
-
-# Resultados
-
-Um ponto de atenção é que como os dados não parecem ser exatamente os mesmos dos exemplos apresentados no artigo, nossos resultados não batem exatamente com o do experimento original, porém, apresentam uma grande semelhança no comportamento (alguns grupos que apresentam uma quantidade grande de casos estão interligados e existem regiões com poucos casos isoladas). Assim, podemos concluir que os resultados não são os mesmos, mas apresentam certa correlação. Focamos em comparar os grupos de regiões definidas como _GL_ uma vez que existem outras duas siglas presentes nos dados disponibilizados, porém elas não são citadas no artigo (acreditamos que seja uma extenção da base de dados original).
-
-A representação gráfica através do histograma nos possibilitou comparar os resultados com o artigo original, e observamos que assim como eles, nossas projeções possuem grupos com grande quantidade de casos conectados entre sí, e grupos onde poucos casos estão presentes acabam se isolando. O que confirma a teoria de _clustering_ entre reigões que tem muitos casos, e atuar diretamente nelas (procurando por focos de dengue) pode resolver o problema de forma mais efetiva (devido a tendência de espalhamento como citam os autores do artigo).
-
-A única diferença é que algumas reigões aparecem diferentes entre o orginal e a nossa releitura, provavelmente devido a alguma alteração dos dados entre os que foram utilizados no artigo e nos que foram disponibilizados posterioremente.
-
-* Maiores detalhes das fórmulas e os valores dos principais grupos estão presentes no [_Notebook_](https://github.com/lstival/mo826/blob/main/P3/P3_MO826.ipynb)*
-<!-- 
-
-> Apresente os resultados obtidos pela sua adaptação.
-> Confronte os seus resultados com aqueles do artigo.
-> Esta seção opcionalmente pode ser apresentada em conjunto com o método.
+Considerando a gravidade que essa doença por ter, o foco desse projeto é analisar as lesões que essa doença causa no cérebro e descobrir se elas são mais se assemelham com lesões isquêmicas ou desmielinizantes.
+Para isso foram treinadas duas redes, uma usando CNN e outra usando SVM, colocando como entrada imagens de cérebros com lesões isquêmicas e desmielinizantes. Após a etapa de treinamento e validação dos modelos, foi utilizado como conjunto de teste imagens de lesões causadas pela SLE, e a partir desses resultados concluir com qual de ambas ela é mais parecida, junto da análise de como o classificador aprendeu a diferenciar as imagens. Esse processo será explicado a seguir.
 
 
-|**Conjunto 01**|                    |   Previsto    |      Previsto      |
-|:-------------:|:------------------:|:-------------:|:------------------:|
-|               |   **Regressão**    | **Negativo**  |    **Positivo**    | 
-| **Real**      | **Negativo**       |      13       |           1        |
-| **Real**      | **Positivo**       |       2       |           5        |
-|               |                    | **Previsto**  |    **Previsto**    |
-|               |   **XGBoost**      | **Negativo**  |    **Positivo**    | 
-|**Real**       | **Negativo**       |      10       |           4        |
-|**Real**       | **Positivo**       |       2       |           5        | -->
+## Ferramentas
+
+Para o desenvolvimento desse projeto foram utilizadas as seguintes ferramentas:
+
+* Skit-Learning: Para a implementação do classificador SVM, junto da normalização das amostras e o processo de busca em grade para a otimização dos hiper parâmetros.
+* Numpy: Para a manipulação das imagens em formato de matrizes, por exemplo, normalizando e aplicando as máscaras.
+* Pandas: Para manipulações dos atributos extraídos das imagens, construção e separação das amostras (conjunto de pacientes).
+* Matplotlib: Manipulação das imagens, desde a leitura, visualizações durante o entendimento dos problemas e avaliações dos resultados.
+* Skit-Image: Utilizado os métodos graycomatriz e graycoprops para a extração de atributos das imagens normalizadas.
+* GLRLM: Responsável pela extração dos atributos das propriedades da matriz de comprimento de corrida.
+* SHAP: Sendo o responsável por realizar a explicação do modelo, apresentando quais foram os atributos de maior impacto para o classificador.
+
+## Preparo e uso dos dados
+
+O pré-processamento dos dados é uma etapa crucial para todo e qualquer projeto, neste trabalho o passo a passo desta etapa está descrito nos tópicos abaixo, lembrando que outras abordagens foram testadas (outras formas de normalização, ordem da aplicação das máscaras antes ou após normalizar, atributos escolhidos). Entretanto, foram mantidas somente aquelas que apresentaram os melhores resultados para nosso classificador e faziam sentidos na nossa interpretação.
+
+* A normalização realizada nas imagens foi a quantizadora, ou seja, diminuindo a quantidade de níveis de cinza da imagem, esse processo foi realizado antes da aplicação da máscara das lesões.
+* As máscaras fornecidas foram aplicadas sobre as imagens normalizada, assim zerando todos os pixels que não estavam presente na máscara, esse processo tornou a imagem com valores somente na região de interesse (lesão).
+* Com as imagens pré-processadas (normalização e máscara aplicada) foi realizada a extração de atributos, onde onze atributos foram obtidos para cada imagem, sendo cinco referentes o comprimento de corrida e seis para a matriz de co-ocorrência.
+* Todas as imagens utilizadas de ambas as classes foram seguiram o preparo descrito acima, visando mantêm a homogeneidade dos dados e replicabilidade do experimento.
+
+# Metodologia
+O processo de separar as classes foi realizado pelo treinamento de um modelo baseado em SVM (do inglês, _Support Vector Machine_), cujo funcionamento consiste em realizar limiar capaz de separar as classes para diminuir a quantidade de amostras que se encontram sem pertencer a uma dos espaços criados. Para obter os melhores resultados possíveis para o modelo treinado o seguinte _pipeline_ foi seguido para a separação, preparação e treinamento do conjunto de dados:
+  
+* Inicialmente os dados foram separados por paciente, para evitar que imagens de pacientes utilizadas para o treinamento fossem utilizadas para validação, assim mantendo a integridade dos conjuntos e evitando o possível vazamento de dados.
+  
+* Os modelos SVM utilizam de três parâmetros principais para realizar o treinamento, Kernel, gamma e C, sendo a sua escolha realizada através de uma busca em grade (do inglês, _Grid Search_), assim selecionado a melhor combinação possível para os dados fornecidos para o treinamento. Antes do conjunto ser fornecido ao modelo foi aplicado a normalização dos dados, colocando eles todos na mesma escala, uma tarefa importantes, dado que, existiam escalas muito diferentes o que causaram problemas na classificação nos primeiros experimentos.
+ 
+* A qualidade do modelo foi avaliada de duas formas, através da acurácia balanceada (visando evitar classificações enviesadas para somente uma classe) e a matriz de confusão, onde é possível observar a distribuição dos erros (quantidade de amostras erradas para cada classe).
+  
+* Durante o treinamento a acurácia apresentada pelo modelo foi de 99.8% de acertos, e quando fornecido para os dados de validação e o conjunto de teste apresentou a taxa de 100% de acertos, a matriz de confusão obtida com os dados de validação pode ser observada logo abaixo:
+  
+| **Matriz de confusao**     |        |                     |    |
+|:---------------------------|:------:|:-------------------:|:--:|
+| Verdadeiro Negativo        | 86     |   Falso Positivo    | 0  |
+| Falso Negativo             | 0      | Verdadeiro Positivo | 77 |
+
+ Escolhemos manter o SVM como classificador devido ele possuir uma boa explicabilidade, sendo essa uma das características mais importantes para um modelo de aprendizado de máquina, quando existe a necessidade de poder demonstrar e entender como aquela descrição foi tomada. Outras decisões realizadas durante a elaboração do trabalho foi a escolha da normalização, escolhemos aquela que visualmente realizou as menores alterações na imagem, porém, em simultâneo, simplificava os valores das imagens.
+
+Normalizar os dados dos atributos obtidos também foi uma decisão importante, pois, as escalas das métricas eram bem diferente (diferença de 6 casas decimais) apresentando resultados não satisfatórios quando não realizadas. Outro ponto importante foi a utilizada da busca em grade permitindo testar diversas combinações de parâmetros para o classificador, tornando os resultados excelentes.
+  
+  Falando agora mais sobre as decisões de quais atributos utilizar, não foram realizados muitos testes nessa parte, pois, quando ajustamos o modelo os atributos que utilizamos apresentaram uma ótima acurácia e decidimos manter todos eles. A escolha de utilizar comprimento de corrida e matriz de co-ocorrência foi tomada devido esse serem os tópicos que possuímos maior grau de conhecimento o que facilitou o entendimento de como extrair os atributos e interpretar o que foi obtido pela biblioteca SHAP.
+  
+  Além disso, o SHAP foi uma escolha para facilitar entendermos o que foi aprendido pelo modelo e criar eventuais explicações para um interessado que seja de fora da computação, dado que o nosso objetivo é tornar esse estudo o mais abrangente possível, não nos fechando ao escopo da computação.
+
+# Resultados Obtidos e Discussão
+Utilizando das 450 imagens fornecidas para validar de lesões LES, aplicando o mesmo _pipeline_ dos demais dados e realizando a inferência com o modelo SVM treinando, obtidos os seguintes resultados:
+
+| **Lesões LES**  ||     | 
+|:--------|:------:|:---:|
+| AVC     | 79     | 35% |
+| EM      | 146    | 65% |
+
+Onde podemos observar que ambas as classes foram selecionadas pelo classificador, porém, com uma tendência da maioria delas se assemelhar a lesões EM, para identificar como essa separação foi realizada utilizamos a biblioteca _SHAP_ que utiliza de _Shapley values_ sendo essa uma técnica de teoria de jogos, onde se computa o ganho coletivo conforme a contribuição de cada participante.
+No caso de explicar um classificador, a biblioteca "simula" os resultados obtidos, porém, alterando os valores das entradas ou até mesmo as ocultando com o intuído de computar "qual o impacto no resultado caso não se utilizasse algum atributo" ou "como valores acima da média das demais desse conjunto impactam no resultado".
+Dessa forma foi obtido o seguinte ranking de importância de cada atributo para o classificador:
+
+<!-- [svc_principais](https://user-images.githubusercontent.com/76977151/177785616-efb61470-4bd0-4a34-a1ff-d4343241415b.png) -->
+<img src="https://user-images.githubusercontent.com/76977151/177785616-efb61470-4bd0-4a34-a1ff-d4343241415b.png" alt="Ranking dos atributos para o classificador"/>
+
+A figura demonstra que a correlação entre os pixels na matriz de co-ocorrência e a homogeneidade dos valores foram as métricas com maior impacto no momento da classificação das imagens, criando assim limiares que nos permitem identificar visualmente essa separação. O gráfico pode ser lido onde valores em azul representam valores para o atributo menor do que a média do conjunto, em quando os valores em rosa são superiores.
+
+Logo podemos notar que para classificar uma amostra como lesão EM, a correlação entre os pixels na matriz de co-ocorrência deve ser baixa (grande volume de pontos azuis aglutinados no quanto superior direito), assim como a homogeneidade deve ser alta (devido a praticamente todos os pontos em tons de rosa estarem presentes do lado direito do eixo X).
+
+Uma possível interpretação da correlação nesse escopo é a presença de padrões na textura da imagem, sendo assim, aparentemente lesões EM (logo as LES também devido à similaridade) possuem uma maior não regularidade nos padrões das lesões.
+Já os alores de homogeneidade mostram o quão unidos estão essas regiões de tons iguais ou parecidos, como as lesões EM possuem os valores acima da média do conjunto, isso pode indicar que esse tipo de lesão é praticamente uniforme sem interrupções, confirmando a possível interpretação da correlação.
+
+# Conclusão
+  Após a idealização e implementação deste trabalho foi possível concluir que as amostras de Lúpus possuem em sua maioria semelhança com as lesões EM sendo essa a classe de imagens segundo nosso classificador SVM mais a classificou. 
+  Considerando os resultados obtidos e as interpretações realizadas por nós, podemos concluir que as lesões LES possuem regiões mais uniformes (de forma contínua na imagem) e com um padrão de textura único (para não apresentar falhas devido à lesão ser uniforme).
+  
+> Principais desafios enfrentados:
+Durante a implementação os maiores desafios foram identificar qual a melhor forma de obter os atributos que tínhamos em mente para classificar as imagens, assim como entender o problema, devido a nossa não familiaridade em trabalhar com imagens desse tipo.
+
+> Lições aprendidas:
+Durante a implementação adquirimos conhecimentos técnicos sobre processamento de imagens, como, formas de representar imagens sem utilizar a matriz dos pixels, como são realizadas as extrações de imagens médicas além do conhecimento mais específico sobre a área do problema (imagens de lesões cerebrais).
+
+> Trabalhos Futuros:
+Possíveis melhorias e até mesmo continuações para esse trabalho seriam: identificar com mais profundidade a importância de cada atributo para o classificador, para que o entendimento sobre o problema se torne mais robusta, permitindo a sua aplicação em casos reais. Utilizar a CNN que aproveitamos a implementação fornecida pelos professores, porém, que não optamos em utilizar devido a já possuímos um classificador com uma robustez aceitável e explicabilidade mais simples.
