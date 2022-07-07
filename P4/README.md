@@ -2,7 +2,7 @@
 
 # Projeto 4 – Classificação de lesões de substância branca no Lúpus
 
-O objetivo geral do projeto é concluir se pacientes com pacientes de Lúpus Eritematoso Sistêmico (SLE) possuem lesões mais semelhantes a lesões isquêmicas ou desmielinizantes, para isso foi optado por utilizar um classicador SVM, pois, os resultados nos dados preliminares demonstraram uma ótima eficiência para separar as classe, e por possuir uma complexbilidade menor e explicabilidade mais fácil foi escolhido como solução.
+O objetivo geral do projeto é concluir se pacientes com Lúpus Eritematoso Sistêmico (SLE) possuem lesões mais semelhantes a lesões isquêmicas ou desmielinizantes, para isso foi optado por utilizar um classicador SVM, pois, os resultados nos dados preliminares demonstraram uma ótima eficiência para separar as classe, e por possuir uma complexbilidade menor e explicabilidade mais fácil foi escolhido como solução.
 
 Além disso, foi utilizada a biblioteca SHAP que computa a "importância" de cada atributo para o classificador, dessa forma tornando o resultado do modelo mais claro, permitindo assim encontrar relações entre o que foi aprendido com o treinamento e caracteristica da imagem médica assim permitindo que o profissional da saúde interessado nesse tipo de análise possa comprender e confiar (considerando que ele possuí dominio sobre o problema) nos resultados obtidos pelo grupo.
 
@@ -17,8 +17,11 @@ O presente projeto foi originado no contexto das atividades da disciplina de pó
 | Leandro Stival             | 263013 |     Computação     |
 
 # Introdução
-> Apresentação de forma resumida do problema (contexto) e a pergunta que se quer responder.
-> **COLOCAR INTRODUÇÃO FALANDO QUAL O PROBLEMA QUE ESTAMOS RESOLVENDO E COMO**
+
+O lúpus é uma doença autoimune, o que significa que o nosso sistema imunitário (sistema de defesa) ataca os tecidos próprios, órgãos e células saudáveis do organismo. O lúpus eritematoso sistémico é a forma mais grave da doença, atingindo múltiplas partes do organismo, podendo surgir diversas complicações, fundamentalmente se não existir tratamento adequado e atempado.
+O foco desse projeto é analisar as lesões que esse doença causa no cérebro e descobrir se elas são mais semelhantes a lesões isquêmicas ou desmielinizantes.
+Para isso foram treinadas duas redes, uma usando CNN e outra usando SVM, colocando como entrada imagens de cérebros com lesões isquêmicas e desmielinizantes, e após a rede estar treinada e validada, foi utilizado como conjunto de teste imagens de lesões causadas pela SLE, e a partir desses resultados concluir com qual de ambas ela é mais parecida. Esse processo será explicado a seguir.
+
 
 ## Ferramentas
 
